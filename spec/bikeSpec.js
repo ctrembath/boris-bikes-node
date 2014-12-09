@@ -9,6 +9,12 @@ describe('Bike', function(){
 
   it('can be broken', function(){
     bike.smash();
-            expect(bike.broken).toEqual(true);
+    expect(bike.broken).toEqual(true);
   });
+
+  it('can be fixed', function(){
+    bike.fix();
+    expect(bike.broken).toEqual(false);
+  });
+
 });

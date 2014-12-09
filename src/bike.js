@@ -7,5 +7,9 @@ Bike.prototype.smash = function() {
   return this.broken;
 };
 
+Bike.prototype.fix = function() {
+  this.broken = false;
+  return this.broken;
+};
 
 module.exports = Bike;
