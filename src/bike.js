@@ -1,5 +1,5 @@
 function Bike() {
-  this.broken = false
+  this.broken = false;
 }
 
 Bike.prototype.smash = function() {
