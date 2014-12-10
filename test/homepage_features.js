@@ -9,11 +9,6 @@ describe('homepage', function(){
     });
   });
 
-  it('should have a button to fill station', function(){
-    casper.then(function(){
-      this.clickLabel('fill station', 'button');
-    });
-  });
 
   it('has a bike button', function() {
      casper.then(function(){
