@@ -11,4 +11,7 @@ Station.prototype.dock = function(bike) {
   this.bikeNumber.push(bike);
 };
 
+Station.prototype.release = function(bike){
+  this.bikeNumber.pop(bike);
+};
 module.exports = Station;
