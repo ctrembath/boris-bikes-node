@@ -3,9 +3,15 @@ describe('homepage', function(){
     casper.start('http://localhost:3000');
 });
 
-  it('hello worlds', function(){
+  it('should welcome you to boris bikes', function(){
     casper.then(function(){
-      expect("body").to.have.text("Hello world");
+     "body".should.contain.text("Welcome to Boris Bikes!");
+    });
+  });
+
+  it('has a bike button', function() {
+    casper.then(function(){
+      expect('body').should.contain.an.element.with.attr("bike");
     });
   });
 });
