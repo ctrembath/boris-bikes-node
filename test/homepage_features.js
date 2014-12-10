@@ -5,13 +5,13 @@ describe('homepage', function(){
 
   it('should welcome you to boris bikes', function(){
     casper.then(function(){
-     "body".should.contain.text("Welcome to Boris Bikes!");
+     expect('body').to.contain.text("Welcome to Boris Bikes!");
     });
   });
 
   it('has a bike button', function() {
-    casper.then(function(){
-      expect('body').should.contain.an.element.with.attr("bike");
+     casper.then(function(){
+      this.clickLabel('bike', 'button');
     });
-  });
+   });
 });

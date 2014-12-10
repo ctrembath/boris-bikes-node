@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
-      files: ['server.js', 'Gruntfile.js', 'src/*.js', 'spec/*.js'],
+      files: ['test/*.js', 'server.js', 'Gruntfile.js', 'src/*.js', 'spec/*.js'],
       options: {
         // options here to override JSHint defaults
         globals: {
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       }
     },
    watch: {
-      files: ['server.js', 'Gruntfile.js', 'src/*.js', 'spec/*.js'],
+      files: ['test/*.js', 'server.js', 'Gruntfile.js', 'src/*.js', 'spec/*.js'],
       tasks: ['jshint']
     },
     jasmine_node: {
