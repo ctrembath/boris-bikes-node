@@ -4,8 +4,13 @@ var server = require('http').createServer(app);
 
 app.set("view engine", "ejs");
 
-app.get('/', function(req, res) {
- res.render("index");
+
+app.get('/', function(request, response) {
+ response.render("index");
+});
+
+app.get('/station/', function(request, response){
+  response.render('station', { numberOfBikes: '10' });
 });
 
 
