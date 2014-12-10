@@ -4,13 +4,17 @@ var server = require('http').createServer(app);
 
 app.set("view engine", "ejs");
 
-app.get('/', function(req, res) {
- res.render("index");
-  
+app.get('/', function(request, response) {
+ response.render("index");
 });
 
-// app.get('/help', function(req, res) {
-  
+app.get('/station/', function(request, response){
+  response.render('station', { numberOfBikes: '10' });
+});
+
+// app.post('/new_station', function(req, res) {
+    // params
+    // Station.create(name: "rby")
 // });
 
 server.listen(3000, function(){
